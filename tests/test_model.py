@@ -74,6 +74,7 @@ class TestFactorySerialization(unittest.TestCase):
 			js=badjs)
 
 	def test_toJSON(self):
+		model.factory.context_uri = 'https://linked.art/ns/v1/linked-art.json'
 		# model.factory.context_uri = 'http://lod.getty.edu/context.json'
 		expect = OrderedDict([
 			('@context', model.factory.context_uri),
